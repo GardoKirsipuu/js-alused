@@ -1,1 +1,1 @@
-#ja_alused
+#js_alused
