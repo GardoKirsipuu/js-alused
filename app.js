@@ -41,6 +41,6 @@ const person = {
 console.log(typeof person);
 
 // näiteks kuupäev objekt
-const today = new date();
+const today = new Date();
 console.log(typeof today);
 console.log(today);
