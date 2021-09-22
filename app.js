@@ -1,29 +1,43 @@
-const num1 = 100;
-const num2 = 50;
+const name = "Gardo";
+const surname = "Kirsipuu";
+const age = 21;
+const text = "Tere, olen Gardo";
+const tags = "programeerimine, linux, windows"
 
-let result;
+let val;
 
-// matemaatika
+// concatenation
 
-result = num1 + num2;
-result = num1 - num2;
-result = num1 * num2;
-result = num1 / num2;
-result = num1 % num2;
+val = name + " " + surname;
 
-//Math
+// append
 
-result = Math.PI
-result = Math.round(2.4);
-result = Math.ceil(2.3);
-result = Math.floor(2.8);
-result = Math.sqrt(54);
-result = Math.abs(.3);
-result = Math.pow(8, 2);
+val = "Gardo ";
+val += surname;
+// val = val + "Gardo"
 
-result = Math.min(24, 22, 54, 1);
-result = Math.max(24, 22, 54, 1);
+val = text + ". Minu tegevusalad on " + tags;
 
-result = Math.round(Math.random() * 10);
+// escaping
 
-console.log(result);
+val = /"See on jutumärkides"/;
+
+// suuruse vahetus
+
+val = name.toUpperCase();
+val = name.toLowerCase();
+
+val = surname[1];
+val = surname.indexOf("G");
+val = surname.lastIndexOf("o");
+
+val = surname.charAt(2);
+val = surname.charAt(surname.lenght - 1);
+
+val = surname.substring(0, 4);
+val = surname.slice(0, 4);
+val = surname.slice(-3);
+
+val = tags.split();
+
+console.log(val);
