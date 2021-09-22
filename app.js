@@ -1,46 +1,51 @@
-//andmetüübid
+let val;
 
-//primitiivid
-//String - sõne, tekts
-const name ="Gardo";
-console.log(typeof name);
+// -> String
 
-//Number
-const age = 17;
-console.log(typeof age);
+val = String(555);
+val = String(4.4);
+val = String(5.0);
 
-const percent = 50.3;
-console.log(typeof percent);
+//boolean -> String
 
-// Boolean
-const hasKids = false;
-console.log(typeof hasKids);
+val = String(true);
+val = String(false);
 
-// Null
-const bawwls = null;
-console.log(typeof bawwls);
+// objekt -> String
 
-// Undefined
-let test;
-console.log(typeof test);
+val = String(new Date());
 
-// Symbol
-const sym = Symbol();
-console.log(typeof sym);
+// massiv -> string
 
-// Objects - reference types - tüübis, mille sisu saab viite kaudu
-// Array - 
-const hobbies = ["snus", "tups"];
-console.log(typeof hobbies);
+val = String([1, 2, 3, 4, 5]);
 
-// Object
-const person = {
-	name: "Doge",
-	age: 21
-};
-console.log(typeof person);
+// toString
 
-// näiteks kuupäev objekt
-const today = new Date();
-console.log(typeof today);
-console.log(today);
+val = (5).toString();
+val = (true).toString();
+
+// string -> number
+
+val = Number("5");
+// boolean -> number
+val = Number(true);
+val = Number(false);
+
+// null -> number
+
+val = Number(null);
+
+//tekst -> number
+
+val = Number("Tere");
+
+// massive -> number
+val = Number([1, 2, 3, 4]);
+
+// string -> number
+val = parseInt("100.30");
+
+val = parseFloat("100.30");
+
+console.log(typeof val);
+console.log(val);
