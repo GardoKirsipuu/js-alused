@@ -1,43 +1,30 @@
-const name = "Gardo";
-const surname = "Kirsipuu";
+const name = "Gardo Kirsipuu";
 const age = 21;
-const text = "Tere, olen Gardo";
-const tags = "programeerimine, linux, windows"
+const job = "õpilane";
+const city = "Mustvee";
 
-let val;
+let html;
 
-// concatenation
+// es5 standard
 
-val = name + " " + surname;
+html = "<ul>" +
+			"<li>" + name + "</lI>" +
+			"<li>" + age + "</lI>" +
+			"<li>" + job + "</lI>" +
+			"<li>" + city + "</lI>" +
+		"</ul>";
 
-// append
+// es6 - template strings
 
-val = "Gardo ";
-val += surname;
-// val = val + "Gardo"
+html = `
+		<ul>
+			<li>Name: ${name}</li>
+			<li>Age: ${age}</li>
+			<li>Job: ${job}</li>
+			<li>City: ${city}</li>
+		</ul>
+`;
 
-val = text + ". Minu tegevusalad on " + tags;
+console.log(html);
 
-// escaping
-
-val = /"See on jutumärkides"/;
-
-// suuruse vahetus
-
-val = name.toUpperCase();
-val = name.toLowerCase();
-
-val = surname[1];
-val = surname.indexOf("G");
-val = surname.lastIndexOf("o");
-
-val = surname.charAt(2);
-val = surname.charAt(surname.lenght - 1);
-
-val = surname.substring(0, 4);
-val = surname.slice(0, 4);
-val = surname.slice(-3);
-
-val = tags.split();
-
-console.log(val);
+document.body.innerHTML = html;
