@@ -3,20 +3,50 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device width, initial-scale=1.0">
+		<!-- Compiled and minified CSS -->
+    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 		<title>JS alused</title>
+	</head>
 	<body>
-		<h2>JS alused - Funktsioonid</h2>
+		<div class="container">
+        <!-- Page Content goes here -->
+        	<div class="row">
+        		<div class="col s12">
+        			<h2>JS alused - DOM</h2>
+        			<div class="card">
+        				<div class="card-content">
+          					<span class="card-title">Task List</span>
+          					<div class="row">
+          						<form id="task-form">
+          							<div class="input-field col s12">
+          								<input type="text">
+          								<label for="">New Task</label>
+        							</div>
+        							<input type="submit" name="Add Task" class="btn">
+          						</form>
+          					</div>
+        				</div>
+        				<div class="card-action">
+          					<h3>Tasks</h3>		
+    						<ul class="collection">
+      							<li class="collection-item">Study JS
+      								<a href="#" class="secondary-content">X</a>
+      							</li>
+      							<li class="collection-item">Study HTML
+      								<a href="#" class="secondary-content">X</a>
+      							</li>
+      							<li class="collection-item">CSS
+      								<a href="#" class="secondary-content">X</a>
+      							</li>
+    						</ul>
+        				</div>
+      				</div>
+        		</div>
+        	</div>
+      	</div>
 
-		<form>
-  		Todo listi lisamine: <input type="text" id="lisaAdd"></button>
-  		<button type="button" onclick="lisamine()">Lisa</button>
-		</form>
-
-		<h3>Todo list:</h3>
-		<ul id="list">
-		</ul>
-
+		<!-- Compiled and minified JavaScript -->
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 		<script src="app.js"></script>
 	</body>
-	</head>
 </html>
