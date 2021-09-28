@@ -1,35 +1,43 @@
 let val;
 
+// document.getElementById('')
 
-val = document;
-val = document.all;
-val = document.all[5];
-val = document.all.length;
+val = document.getElementById('tasks-title');
+val = document.getElementById('tasks-title').id;
+val = document.getElementById('tasks-title').className;
 
-val = document.head;
-val = document.body;
+const tasksTitle = document.getElementById('tasks-title');
 
-val = document.doctype;
+// stiili muutmine
 
-val = document.domain;
-val = document.URL;
-val = document.characterSet;
-val = document.contentType;
+tasksTitle.style.background = "#333"
+tasksTitle.style.color = "#fff"
+tasksTitle.style.padding = "5px"
+// tasksTitle.style.display = "none"
 
-val = document.forms;
-val = document.forms[0];
-val = document.forms[0].method;
-val = document.forms[0].action;
-val = document.forms[0].id;
+// sisu muutmine
+tasksTitle.textContent = "My tasks"
+tasksTitle.innerText = "My favourite tasks"
+//tasksTitle.innerHTML = "<span style="color: red;">My Tasks</span>";
 
-val = document.links[0];
-val = document.links[0].id;
-val = document.links[0].className;
-val = document.links[0].classList[0];
+// document.querySelector
 
-val = document.scripts;
-val = document.scripts[0];
-val = document.scripts[1];
-val = document.scripts[1].getAttribute("src");
+val = document.querySelector("#tasks-title")
+val = document.querySelector(".card-title")
+val = document.querySelector("h2")
+
+document.querySelector("li").style.color = "red"
+
+document.querySelector("ul li").style.color = "blue"
+
+document.querySelector("li:last-child").style.color = "green"
+
+document.querySelector("ul li").style.color = "blue"
+
+document.querySelector("li:nth-child(odd)").style.background = "#ccc"
+
+document.querySelector("li:nth-child(even)").style.background = "#f4f4f4"
+
+document.querySelector("li:last-child").style.background = "#ccc"
 
 console.log(val);
