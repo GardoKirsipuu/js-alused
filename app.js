@@ -1,36 +1,23 @@
-let val;
-
+// elemendi loomine
+const li = document.createElement('li');
 const list = document.querySelector('ul');
-const listItem = document.querySelector('li:first-child');
 
-val = list;
-val = listItem;
+// klassi määramine
+li.className = 'collection-item';
 
-val = list.childNodes;
-val = list.childNodes[0];
-val = list.childNodes[0].nodeName;
-val = list.childNodes[0].nodeType;
+// teksti lisamine
+li.appendChild(document.createTextNode('Study element creation'));
 
-val = list.children;
-val = list.children[1];
-list.children[1].textContent = "Study XML";
+const link = document.createElement('a');
+link.className = 'secondary-content';
+link.appendChild(document.createTextNode('X'));
 
-val = list.children[2].children;
-list.children[2].children[0].id = 'test-id';
+// lisa atribuut väärtusega
+link.setAttribute('href', '#');
 
-val = list.firstChild;
-val = list.firstElementChild;
+li.appendChild(link);
 
-val = list.lastChild;
-val = list.lastElementChild;
+// elemendi lisamine teise elemendi sisse
+list.appendChild(li);
 
-val = list.childElementCount;
-
-val = listItem.parentNode;
-val = listItem.parentElement;
-val = listItem.parentElement.parentElement;
-
-val = listItem.nextSibling;
-val = listItem.nextElementSibling.nextElementSibling.previousElementSibling;
-
-console.log(val);
+console.log(li);
