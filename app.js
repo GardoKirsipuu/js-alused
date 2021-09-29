@@ -1,18 +1,36 @@
 let val;
 
-val = document.querySelectorAll("li");
+const list = document.querySelector('ul');
+const listItem = document.querySelector('li:first-child');
 
-const oddLi = document.querySelectorAll(`li:nth-child(odd)`);
+val = list;
+val = listItem;
 
-const evenLi = document.querySelectorAll(`li:nth-child(even)`);
+val = list.childNodes;
+val = list.childNodes[0];
+val = list.childNodes[0].nodeName;
+val = list.childNodes[0].nodeType;
 
-oddLi.forEach(function(li){
-	console.log(li)
-	li.style.background = "grey"
-})
+val = list.children;
+val = list.children[1];
+list.children[1].textContent = "Study XML";
 
-for(let i = 0; i < evenLi.length; i++){
-	evenLi[i].style.background = "green"
-}
+val = list.children[2].children;
+list.children[2].children[0].id = 'test-id';
 
-// console.log(evenLi);
+val = list.firstChild;
+val = list.firstElementChild;
+
+val = list.lastChild;
+val = list.lastElementChild;
+
+val = list.childElementCount;
+
+val = listItem.parentNode;
+val = listItem.parentElement;
+val = listItem.parentElement.parentElement;
+
+val = listItem.nextSibling;
+val = listItem.nextElementSibling.nextElementSibling.previousElementSibling;
+
+console.log(val);
