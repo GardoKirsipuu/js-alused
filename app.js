@@ -1,29 +1,27 @@
 // elemendi loomine
 const form = document.querySelector('form');
 const taskInput = document.querySelector('#task');
-const heading = document.querySelector('h4');
 
-taskInput.value = '';
-
-// submit
-// form.addEventListener('submit', runEvent);
-
-// keyboard
-// form.addEventListener('keydown', runEvent);
-// form.addEventListener('keyup', runEvent);
-// taskInput.addEventListener('keypress', runEvent);
-
-// input väljas fokuseerimine ja lahti fokuseerimine
-// taskInput.addEventListener('focus', runEvent);
-// taskInput.addEventListener('blur', runEvent);
-
-// taskInput.addEventListener('cut', runEvent);
-// taskInput.addEventListener('paste', runEvent);
-// taskInput.addEventListener('input', runEvent);
+// submit 
+form.addEventListener('submit', addToList)
 
 
-function runEvent(e) {
-	console.log(`Event type: ${e.type}`);
-	heading.innerText = e.target.value;
-	// e.preventDefault();
+function addToList(e) {
+	const li = document.createElement('li');
+	const list = document.querySelector('ul');
+
+	li.className = 'collection-item';
+	li.appendChild(document.createTextNode(taskInput.value));
+
+	const link = document.createElement('a');
+	link.className = 'secondary-content'
+	link.appendChild(document.createTextNode('X'));
+	link.setAttribute('href', '#')
+
+	li.appendChild(link);
+	list.appendChild(li);
+
+	taskInput.value = '';
+
+	e.preventDefault();
 }
