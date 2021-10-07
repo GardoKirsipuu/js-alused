@@ -4,8 +4,9 @@ const taskList = document.querySelector('ul')
 // taskList.remove();
 
 // click
-taskList.addEventListener('click', runEvent)
+taskList.addEventListener('click', removeFromList)
 
-function runEvent(e) {
-	console.log(`Event is ${e.type}`);
+function removeFromList(e) {
+	const target = event.target.parentElement;
+	target.remove();
 }
