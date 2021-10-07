@@ -1,27 +1,11 @@
-// elemendi loomine
-const form = document.querySelector('form');
-const taskInput = document.querySelector('#task');
+// event elements
+const taskList = document.querySelector('ul')
 
-// submit 
-form.addEventListener('submit', addToList)
+// taskList.remove();
 
+// click
+taskList.addEventListener('click', runEvent)
 
-function addToList(e) {
-	const li = document.createElement('li');
-	const list = document.querySelector('ul');
-
-	li.className = 'collection-item';
-	li.appendChild(document.createTextNode(taskInput.value));
-
-	const link = document.createElement('a');
-	link.className = 'secondary-content'
-	link.appendChild(document.createTextNode('X'));
-	link.setAttribute('href', '#')
-
-	li.appendChild(link);
-	list.appendChild(li);
-
-	taskInput.value = '';
-
-	e.preventDefault();
+function runEvent(e) {
+	console.log(`Event is ${e.type}`);
 }
