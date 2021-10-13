@@ -1,15 +1,17 @@
 // event elements
 const form = document.querySelector('form');
 const taskInput = document.querySelector('#task');
-const taskList = document.querySelector('ul')
-const remAll = document.getElementById('remAllbtn')
+const taskList = document.querySelector('ul');
+const remAll = document.getElementById('remAllbtn');
+const filterInput = document.querySelector('#filter');
 
 document.addEventListener('DOMContentLoaded', getTasks);
 
-// submit 
-form.addEventListener('submit', addToList)
+// filter input event
+filterInput.addEventListener('keyup', filterTask);
 
-// localstorage
+// submit 
+form.addEventListener('submit', addToList);
 
 // Adding to list
 function addToList(e) {
@@ -110,3 +112,16 @@ function getTasks(e){
 	});
 	localStorage.setItem('tasks', JSON.stringify(tasks));
 }
+
+function filterTask(e){
+	const text = e.target.value.toLowerCase();
+	const tasks = document.querySelectorAll('.collection-item');
+	tasks.forEach(function(element){
+		const task = element.firstChild.textContent.toLowerCase();
+		if(task.indexOf(text) != -1){
+			element.style.display = 'block';
+		} else {
+			element.style.display = 'none'
+		}
+	});
+	}
